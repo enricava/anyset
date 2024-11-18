@@ -8,10 +8,10 @@ import (
 
 func TestMapSetOneItem(t *testing.T) {
 	// Call the generic verifier function
-	VerifySetImplOneItem[anyset.MapSet[int]](anyset.NewMapSet[int], t)
+	VerifySetImplOneItem(anyset.NewMapSet, t)
 }
 
 func TestMapSetManyItems(t *testing.T) {
 	// Call the generic verifier function
-	VerifySetManyItems[anyset.MapSet[int]](anyset.NewMapSet[int], t)
+	VerifySetManyItems(anyset.NewMapSet, t)
 }

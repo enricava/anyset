@@ -13,7 +13,8 @@ type Set[T comparable] interface {
 	Contains(T) bool
 }
 
-type Create[T comparable, S Set[T]] func() S
+// A generic function type that returns a Set implementation of type T
+type Create[T comparable] func() Set[T]
 
 func AddMany[T comparable](set Set[T], items ...T) {
 	for _, item := range items {

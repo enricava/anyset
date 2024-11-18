@@ -21,7 +21,7 @@ func (o MapSet[T]) Contains(item T) (ok bool) {
 	return
 }
 
-func NewMapSet[T comparable]() MapSet[T] {
+func NewMapSet[T comparable]() Set[T] {
 	return MapSet[T]{
 		container: make(map[T]bool),
 	}

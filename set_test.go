@@ -15,9 +15,8 @@ import (
 // implementation.
 //
 // Tests the set for Contains after every operation.
-func VerifySetImplOneItem[S anyset.Set[int]](createSet anyset.Create[int, S], t *testing.T) {
-	var set S
-	set = createSet()
+func VerifySetImplOneItem(createSet anyset.Create[int], t *testing.T) {
+	var set anyset.Set[int] = createSet()
 
 	set.Add(1)
 
@@ -38,9 +37,8 @@ func VerifySetImplOneItem[S anyset.Set[int]](createSet anyset.Create[int, S], t 
 // implementation.
 //
 // Tests the set for Contains after every operation.
-func VerifySetManyItems[S anyset.Set[int]](createSet anyset.Create[int, S], t *testing.T) {
-	var set S
-	set = createSet()
+func VerifySetManyItems(createSet anyset.Create[int], t *testing.T) {
+	var set anyset.Set[int] = createSet()
 
 	anyset.AddMany(set, 1, 2, 3, 4)
 

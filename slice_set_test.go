@@ -8,10 +8,10 @@ import (
 
 func TestSliceSetOneItem(t *testing.T) {
 	// Call the generic verifier function
-	VerifySetImplOneItem[anyset.SliceSet[int]](anyset.NewSliceSet[int], t)
+	VerifySetImplOneItem(anyset.NewSliceSet, t)
 }
 
 func TestSliceSetManyItems(t *testing.T) {
 	// Call the generic verifier function
-	VerifySetManyItems[anyset.SliceSet[int]](anyset.NewSliceSet[int], t)
+	VerifySetManyItems(anyset.NewSliceSet, t)
 }

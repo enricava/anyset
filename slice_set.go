@@ -34,7 +34,7 @@ func (o SliceSet[T]) Contains(item T) (ok bool) {
 	return false
 }
 
-func NewSliceSet[T comparable]() SliceSet[T] {
+func NewSliceSet[T comparable]() Set[T] {
 	newContainer := make([]T, 0)
 	return SliceSet[T]{
 		container: &newContainer,
